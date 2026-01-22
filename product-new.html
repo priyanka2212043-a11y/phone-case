@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Create your custom anime-style phone case. Upload your selfie, choose your phone model, and get a premium case with your photo as anime art.">
+    <meta name="keywords" content="custom anime phone case, personalized phone case, anime art phone case, photo to anime">
+    
+    <title>Custom Anime Phone Case - Upload Your Photo | Anime Case</title>
+    
+    <link rel="stylesheet" href="styles-dark-premium.css">
+    <style>
+        .product-page {
+            padding-top: 100px;
+            min-height: 100vh;
+        }
+
+        .product-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+            margin-bottom: 4rem;
+        }
+
+        .product-preview {
+            position: sticky;
+            top: 120px;
+        }
+
+        .preview-card {
+            background: var(--color-bg-card);
+            border: 1px solid var(--color-border-subtle);
+            border-radius: var(--radius-2xl);
+            padding: 3rem;
+            text-align: center;
+        }
+
+        .phone-preview {
+            width: 100%;
+            max-width: 400px;
+            aspect-ratio: 9/16;
+            margin: 0 auto;
+            background: linear-gradient(135deg, var(--color-accent-purple), var(--color-accent-blue));
+            border-radius: 2rem;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            box-shadow: var(--shadow-xl);
+            transition: all var(--transition-base);
+        }
+
+        .phone-preview:hover {
+            transform: scale(1.02);
+            box-shadow: var(--glow-purple);
+        }
+
+        .upload-zone {
+            border: 2px dashed var(--color-border-emphasis);
+            border-radius: var(--radius-lg);
+            padding: 3rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all var(--transition-base);
+            background: var(--color-bg-tertiary);
+        }
+
+        .upload-zone:hover {
+            border-color: var(--color-accent-blue);
+            background: var(--color-bg-elevated);
+        }
+
+        .upload-zone.dragover {
+            border-color: var(--color-accent-purple);
+            background: var(--color-bg-elevated);
+            box-shadow: var(--glow-purple);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: var(--font-weight-semibold);
+            margin-bottom: 0.5rem;
+            color: var(--color-text-primary);
+        }
+
+        .price-display {
+            background: var(--color-bg-elevated);
+            border: 1px solid var(--color-border-emphasis);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.75rem;
+        }
+
+        .price-total {
+            font-size: var(--font-2xl);
+            font-weight: var(--font-weight-black);
+            padding-top: 1rem;
+            border-top: 1px solid var(--color-border-default);
+            background: var(--gradient-blue-purple);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @media (max-width: 1024px) {
+            .product-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .product-preview {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">ANIME CASE</a>
+            </div>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html" class="active">Product</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" class="cart-link">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count">0</span>
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Product Page -->
+    <section class="product-page">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <span class="hero-badge">✨ Custom Made Just For You</span>
+                <h1 style="font-size: var(--font-4xl); font-weight: var(--font-weight-black); margin: 1rem 0;">
+                    Create Your Dream <span class="gradient-text">Anime Case</span>
+                </h1>
+                <p style="font-size: var(--font-lg); color: var(--color-text-secondary);">
+                    Upload your photo and let our artists work their magic
+                </p>
+            </div>
+
+            <div class="product-container">
+                <!-- Product Preview (Left Column) -->
+                <div class="product-preview">
+                    <div class="preview-card" data-scroll-reveal>
+                        <div class="phone-preview" id="phonePreview">
+                            📱
+                        </div>
+                        <p style="color: var(--color-text-secondary); margin-top: 1.5rem;">
+                            Your custom anime case preview
+                        </p>
+                        <div style="margin-top: 2rem; padding: 1rem; background: var(--color-bg-tertiary); border-radius: var(--radius-md);">
+                            <p style="font-size: var(--font-sm); color: var(--color-text-muted);">
+                                ✓ Professional artwork in 2-3 days<br>
+                                ✓ Premium protective case<br>
+                                ✓ Worldwide shipping
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Form (Right Column) -->
+                <div class="product-form" data-scroll-reveal>
+                    <form id="productForm">
+                        <!-- Upload Your Selfie -->
+                        <div class="form-group">
+                            <label class="form-label">
+                                1. Upload Your Selfie <span style="color: var(--color-accent-red);">*</span>
+                            </label>
+                            <div class="upload-zone" id="selfieUpload">
+                                <div style="font-size: 3rem; margin-bottom: 1rem;">📸</div>
+                                <h3 style="font-size: var(--font-lg); margin-bottom: 0.5rem;">Drop your selfie here</h3>
+                                <p style="color: var(--color-text-secondary); margin-bottom: 1rem;">
+                                    or click to browse
+                                </p>
+                                <input type="file" id="selfieInput" accept="image/*" style="display: none;" required>
+                                <button type="button" class="btn btn-secondary" onclick="document.getElementById('selfieInput').click()">
+                                    Choose File
+                                </button>
+                            </div>
+                            <p style="font-size: var(--font-sm); color: var(--color-text-muted); margin-top: 0.5rem;">
+                                For best results, use a clear, well-lit photo of your face
+                            </p>
+                        </div>
+
+                        <!-- Upload Reference Image (Optional) -->
+                        <div class="form-group">
+                            <label class="form-label">
+                                2. Upload Reference Image (Optional)
+                            </label>
+                            <div class="upload-zone" id="referenceUpload">
+                                <div style="font-size: 3rem; margin-bottom: 1rem;">🎨</div>
+                                <h3 style="font-size: var(--font-lg); margin-bottom: 0.5rem;">Add style inspiration</h3>
+                                <p style="color: var(--color-text-secondary); margin-bottom: 1rem;">
+                                    Upload an anime character or style you like
+                                </p>
+                                <input type="file" id="referenceInput" accept="image/*" style="display: none;">
+                                <button type="button" class="btn btn-secondary" onclick="document.getElementById('referenceInput').click()">
+                                    Choose File
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Select Phone Model -->
+                        <div class="form-group">
+                            <label class="form-label" for="phoneModel">
+                                3. Select Your Phone Model <span style="color: var(--color-accent-red);">*</span>
+                            </label>
+                            <select id="phoneModel" required>
+                                <option value="">Choose your phone model...</option>
+                                <optgroup label="iPhone">
+                                    <option value="iphone-15-pro-max">iPhone 15 Pro Max</option>
+                                    <option value="iphone-15-pro">iPhone 15 Pro</option>
+                                    <option value="iphone-15-plus">iPhone 15 Plus</option>
+                                    <option value="iphone-15">iPhone 15</option>
+                                    <option value="iphone-14-pro-max">iPhone 14 Pro Max</option>
+                                    <option value="iphone-14-pro">iPhone 14 Pro</option>
+                                    <option value="iphone-14-plus">iPhone 14 Plus</option>
+                                    <option value="iphone-14">iPhone 14</option>
+                                    <option value="iphone-13-pro-max">iPhone 13 Pro Max</option>
+                                    <option value="iphone-13">iPhone 13</option>
+                                    <option value="iphone-12">iPhone 12</option>
+                                </optgroup>
+                                <optgroup label="Samsung">
+                                    <option value="samsung-s24-ultra">Samsung Galaxy S24 Ultra</option>
+                                    <option value="samsung-s24-plus">Samsung Galaxy S24+</option>
+                                    <option value="samsung-s24">Samsung Galaxy S24</option>
+                                    <option value="samsung-s23-ultra">Samsung Galaxy S23 Ultra</option>
+                                    <option value="samsung-s23">Samsung Galaxy S23</option>
+                                    <option value="samsung-s22">Samsung Galaxy S22</option>
+                                </optgroup>
+                                <optgroup label="Google Pixel">
+                                    <option value="pixel-8-pro">Google Pixel 8 Pro</option>
+                                    <option value="pixel-8">Google Pixel 8</option>
+                                    <option value="pixel-7-pro">Google Pixel 7 Pro</option>
+                                    <option value="pixel-7">Google Pixel 7</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <!-- Case Type -->
+                        <div class="form-group">
+                            <label class="form-label">
+                                4. Choose Case Type <span style="color: var(--color-accent-red);">*</span>
+                            </label>
+                            <div style="display: grid; gap: 1rem;">
+                                <label class="card" style="cursor: pointer; padding: 1.5rem;">
+                                    <input type="radio" name="caseType" value="classic" style="margin-right: 1rem;" checked>
+                                    <div style="display: inline-block;">
+                                        <strong>Classic Case</strong> - $29.99
+                                        <p style="font-size: var(--font-sm); color: var(--color-text-secondary); margin-top: 0.25rem;">
+                                            Slim profile, premium protection
+                                        </p>
+                                    </div>
+                                </label>
+                                <label class="card" style="cursor: pointer; padding: 1.5rem;">
+                                    <input type="radio" name="caseType" value="pro" style="margin-right: 1rem;">
+                                    <div style="display: inline-block;">
+                                        <strong>Pro Case</strong> - $34.99
+                                        <p style="font-size: var(--font-sm); color: var(--color-text-secondary); margin-top: 0.25rem;">
+                                            Enhanced protection, grip texture
+                                        </p>
+                                    </div>
+                                </label>
+                                <label class="card" style="cursor: pointer; padding: 1.5rem;">
+                                    <input type="radio" name="caseType" value="premium" style="margin-right: 1rem;">
+                                    <div style="display: inline-block;">
+                                        <strong>Premium Case</strong> - $39.99
+                                        <p style="font-size: var(--font-sm); color: var(--color-text-secondary); margin-top: 0.25rem;">
+                                            Luxury finish, maximum protection
+                                        </p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Order Notes -->
+                        <div class="form-group">
+                            <label class="form-label" for="orderNotes">
+                                5. Special Instructions (Optional)
+                            </label>
+                            <textarea id="orderNotes" placeholder="Any special requests for your artwork? (e.g., specific colors, background, style preferences)" rows="4"></textarea>
+                        </div>
+
+                        <!-- Price Summary -->
+                        <div class="price-display">
+                            <div class="price-row">
+                                <span style="color: var(--color-text-secondary);">Case Price:</span>
+                                <span id="casePrice" style="font-weight: var(--font-weight-semibold);">$29.99</span>
+                            </div>
+                            <div class="price-row">
+                                <span style="color: var(--color-text-secondary);">Artwork:</span>
+                                <span style="font-weight: var(--font-weight-semibold);">Included</span>
+                            </div>
+                            <div class="price-row">
+                                <span style="color: var(--color-text-secondary);">Shipping:</span>
+                                <span style="font-weight: var(--font-weight-semibold);">Calculated at checkout</span>
+                            </div>
+                            <div class="price-row" style="margin-bottom: 0;">
+                                <span style="font-weight: var(--font-weight-bold);">Total:</span>
+                                <span class="price-total" id="totalPrice">$29.99</span>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">
+                            Add to Cart →
+                        </button>
+
+                        <p style="text-align: center; font-size: var(--font-sm); color: var(--color-text-muted); margin-top: 1rem;">
+                            Free revisions included • 100% satisfaction guaranteed
+                        </p>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Features -->
+            <div style="margin-top: 4rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <div class="card" style="text-align: center;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🎨</div>
+                    <h3 style="font-size: var(--font-lg); margin-bottom: 0.5rem;">Professional Artists</h3>
+                    <p style="color: var(--color-text-secondary); font-size: var(--font-sm);">
+                        Hand-crafted by skilled anime illustrators
+                    </p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">⚡</div>
+                    <h3 style="font-size: var(--font-lg); margin-bottom: 0.5rem;">Fast Delivery</h3>
+                    <p style="color: var(--color-text-secondary); font-size: var(--font-sm);">
+                        Artwork ready in 2-3 business days
+                    </p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">💯</div>
+                    <h3 style="font-size: var(--font-lg); margin-bottom: 0.5rem;">Quality Guarantee</h3>
+                    <p style="color: var(--color-text-secondary); font-size: var(--font-sm);">
+                        Free revisions until you're satisfied
+                    </p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🛡️</div>
+                    <h3 style="font-size: var(--font-lg); margin-bottom: 0.5rem;">Premium Protection</h3>
+                    <p style="color: var(--color-text-secondary); font-size: var(--font-sm);">
+                        High-quality materials that last
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Anime Case</h3>
+                    <p style="color: var(--color-text-secondary); margin-top: 1rem;">
+                        Transform your photos into stunning anime art on premium custom phone cases.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Product</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Help Center</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">TikTok</a></li>
+                        <li><a href="#">Discord</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Anime Case. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Navbar Scroll Effect
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll Reveal Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('[data-scroll-reveal]').forEach(el => {
+            observer.observe(el);
+        });
+
+        // File Upload Handlers
+        const selfieUpload = document.getElementById('selfieUpload');
+        const selfieInput = document.getElementById('selfieInput');
+        const referenceUpload = document.getElementById('referenceUpload');
+        const referenceInput = document.getElementById('referenceInput');
+
+        // Drag and drop for selfie
+        selfieUpload.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            selfieUpload.classList.add('dragover');
+        });
+
+        selfieUpload.addEventListener('dragleave', () => {
+            selfieUpload.classList.remove('dragover');
+        });
+
+        selfieUpload.addEventListener('drop', (e) => {
+            e.preventDefault();
+            selfieUpload.classList.remove('dragover');
+            selfieInput.files = e.dataTransfer.files;
+            handleFileUpload(selfieInput);
+        });
+
+        // Drag and drop for reference
+        referenceUpload.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            referenceUpload.classList.add('dragover');
+        });
+
+        referenceUpload.addEventListener('dragleave', () => {
+            referenceUpload.classList.remove('dragover');
+        });
+
+        referenceUpload.addEventListener('drop', (e) => {
+            e.preventDefault();
+            referenceUpload.classList.remove('dragover');
+            referenceInput.files = e.dataTransfer.files;
+            handleFileUpload(referenceInput);
+        });
+
+        selfieInput.addEventListener('change', () => handleFileUpload(selfieInput));
+        referenceInput.addEventListener('change', () => handleFileUpload(referenceInput));
+
+        function handleFileUpload(input) {
+            if (input.files && input.files[0]) {
+                const fileName = input.files[0].name;
+                const uploadZone = input.id === 'selfieInput' ? selfieUpload : referenceUpload;
+                uploadZone.style.borderColor = 'var(--color-accent-blue)';
+                uploadZone.querySelector('p').textContent = `✓ ${fileName}`;
+            }
+        }
+
+        // Case Type Selection Price Update
+        const caseTypeInputs = document.querySelectorAll('input[name="caseType"]');
+        const casePriceDisplay = document.getElementById('casePrice');
+        const totalPriceDisplay = document.getElementById('totalPrice');
+
+        caseTypeInputs.forEach(input => {
+            input.addEventListener('change', () => {
+                let price = 29.99;
+                if (input.value === 'pro') price = 34.99;
+                if (input.value === 'premium') price = 39.99;
+                
+                casePriceDisplay.textContent = `$${price.toFixed(2)}`;
+                totalPriceDisplay.textContent = `$${price.toFixed(2)}`;
+            });
+        });
+
+        // Form Submission
+        document.getElementById('productForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            if (!selfieInput.files.length) {
+                alert('Please upload your selfie to continue.');
+                return;
+            }
+            
+            if (!document.getElementById('phoneModel').value) {
+                alert('Please select your phone model.');
+                return;
+            }
+            
+            // In a real implementation, this would send data to a server
+            alert('Great! Your custom case has been added to cart. Proceeding to checkout...');
+            // window.location.href = 'checkout.html';
+        });
+    </script>
+</body>
+</html>

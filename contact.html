@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Contact Anime Case for custom anime phone case inquiries, support, or questions. We're here to help transform your photos into anime art.">
+    <meta name="keywords" content="contact anime case, customer support, anime phone case help">
+    
+    <title>Contact Us - Anime Case</title>
+    
+    <!-- SHOPIFY: This can be a page template (page.contact.liquid) -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">ANIME CASE</a>
+            </div>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="#" class="cart-link">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count">0</span>
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">Get In Touch</h1>
+            <p class="page-subtitle">Have questions? We'd love to hear from you.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    <p>Feel free to reach out with any questions about our custom anime phone cases, orders, or artwork.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <!-- SHOPIFY: Replace with actual store email -->
+                                <a href="mailto:support@animecase.com">support@animecase.com</a>
+                                <p>We typically respond within 24 hours</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">💬</div>
+                            <div class="contact-details">
+                                <h3>Live Chat</h3>
+                                <p>Available Mon-Fri, 9am-5pm EST</p>
+                                <button class="btn btn-secondary btn-small">Start Chat</button>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">📱</div>
+                            <div class="contact-details">
+                                <h3>Social Media</h3>
+                                <p>Follow us for updates and inspiration</p>
+                                <div class="social-links">
+                                    <a href="#">📷 Instagram</a>
+                                    <a href="#">🐦 Twitter</a>
+                                    <a href="#">🎵 TikTok</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">❓</div>
+                            <div class="contact-details">
+                                <h3>FAQ</h3>
+                                <p>Quick answers to common questions</p>
+                                <a href="faq.html" class="btn btn-secondary btn-small">Visit FAQ</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h2>Send Us a Message</h2>
+                    
+                    <!-- 
+                        SHOPIFY MIGRATION:
+                        - Use Shopify contact form: {% form 'contact' %}
+                        - Form submits to /contact
+                        - Success message via Liquid: {% if form.posted_successfully? %}
+                        - Add honeypot field for spam protection
+                    -->
+                    <form id="contactForm" class="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name *</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                class="form-input" 
+                                placeholder="Your full name"
+                                required
+                            >
+                            <span class="form-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email *</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                class="form-input" 
+                                placeholder="your.email@example.com"
+                                required
+                            >
+                            <span class="form-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject *</label>
+                            <select id="subject" name="subject" class="form-input" required>
+                                <option value="">Select a subject</option>
+                                <option value="order-inquiry">Order Inquiry</option>
+                                <option value="product-question">Product Question</option>
+                                <option value="artwork-revision">Artwork Revision</option>
+                                <option value="shipping">Shipping & Delivery</option>
+                                <option value="return">Returns & Refunds</option>
+                                <option value="technical">Technical Issue</option>
+                                <option value="partnership">Partnership/Collaboration</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <span class="form-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="orderNumber" class="form-label">Order Number (Optional)</label>
+                            <input 
+                                type="text" 
+                                id="orderNumber" 
+                                name="orderNumber" 
+                                class="form-input" 
+                                placeholder="#12345"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message *</label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                class="form-input form-textarea" 
+                                rows="6"
+                                placeholder="Tell us how we can help..."
+                                required
+                            ></textarea>
+                            <span class="form-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <span>Subscribe to our newsletter for updates and exclusive offers</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large btn-full">
+                            Send Message
+                        </button>
+
+                        <!-- Success/Error Messages -->
+                        <div id="formMessage" class="form-message" style="display: none;"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Preview -->
+    <section class="faq-preview">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Quick answers to common questions</p>
+            
+            <div class="faq-grid">
+                <div class="faq-card">
+                    <h3>How long does it take?</h3>
+                    <p>2-3 days for artwork creation, plus 5-7 days for shipping.</p>
+                    <a href="faq.html" class="link-arrow">Learn more →</a>
+                </div>
+                
+                <div class="faq-card">
+                    <h3>What if I don't like the artwork?</h3>
+                    <p>We offer free revisions until you're 100% satisfied.</p>
+                    <a href="faq.html" class="link-arrow">Learn more →</a>
+                </div>
+                
+                <div class="faq-card">
+                    <h3>What photo should I use?</h3>
+                    <p>A clear, well-lit selfie or portrait works best.</p>
+                    <a href="faq.html" class="link-arrow">Learn more →</a>
+                </div>
+                
+                <div class="faq-card">
+                    <h3>Can I return my case?</h3>
+                    <p>Defective cases can be returned within 30 days.</p>
+                    <a href="faq.html" class="link-arrow">Learn more →</a>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 2rem;">
+                <a href="faq.html" class="btn btn-secondary">View All FAQs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>ANIME CASE</h4>
+                    <p>Transform your photos into stunning anime art on premium phone cases.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Product</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="faq.html">Shipping Info</a></li>
+                        <li><a href="faq.html">Returns & Refunds</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <!-- Social Media Links - Replace with your actual profiles -->
+                        <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-icon instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://tiktok.com/@yourprofile" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="social-icon tiktok">
+                            <span>🎵</span>
+                        </a>
+                        <a href="https://discord.gg/yourinvite" target="_blank" rel="noopener noreferrer" aria-label="Discord" class="social-icon discord">
+                            <span>💬</span>
+                        </a>
+                        <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="social-icon twitter">
+                            <span>🐦</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Anime Case. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System Preview - Anime Case</title>
+    <link rel="stylesheet" href="styles-dark-premium.css">
+    <style>
+        .preview-section {
+            margin-bottom: 4rem;
+            padding: 2rem;
+            background: var(--color-bg-card);
+            border: 1px solid var(--color-border-subtle);
+            border-radius: var(--radius-xl);
+        }
+        .preview-title {
+            font-size: var(--font-2xl);
+            font-weight: var(--font-weight-bold);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--color-border-default);
+        }
+        .color-swatch {
+            width: 100px;
+            height: 100px;
+            border-radius: var(--radius-md);
+            display: inline-block;
+            margin: 0.5rem;
+            border: 1px solid var(--color-border-emphasis);
+        }
+        .component-row {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .text-sample {
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body style="padding-top: 80px;">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">ANIME CASE</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index-new.html">Home</a></li>
+                <li><a href="product-new.html">Product</a></li>
+                <li><a href="faq-new.html">FAQ</a></li>
+                <li><a href="contact-new.html">Contact</a></li>
+                <li><a href="#" class="cart-link">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count">0</span>
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section style="padding: 3rem 0;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <span class="hero-badge">🎨 Design System</span>
+                <h1 style="font-size: var(--font-5xl); font-weight: var(--font-weight-black); margin: 1rem 0;">
+                    Anime Case <span class="gradient-text">Design Preview</span>
+                </h1>
+                <p style="font-size: var(--font-lg); color: var(--color-text-secondary);">
+                    Premium dark theme components and styles
+                </p>
+            </div>
+
+            <!-- Color Palette -->
+            <div class="preview-section">
+                <h2 class="preview-title">🌈 Color Palette</h2>
+                
+                <h3 style="margin: 2rem 0 1rem; font-size: var(--font-lg);">Backgrounds</h3>
+                <div>
+                    <div class="color-swatch" style="background: var(--color-bg-primary);">
+                        <div style="padding: 1rem; font-size: var(--font-xs);">Primary<br>#0B0B0D</div>
+                    </div>
+                    <div class="color-swatch" style="background: var(--color-bg-secondary);">
+                        <div style="padding: 1rem; font-size: var(--font-xs);">Secondary<br>#111111</div>
+                    </div>
+                    <div class="color-swatch" style="background: var(--color-bg-tertiary);">
+                        <div style="padding: 1rem; font-size: var(--font-xs);">Tertiary<br>#1A1A1A</div>
+                    </div>
+                    <div class="color-swatch" style="background: var(--color-bg-elevated);">
+                        <div style="padding: 1rem; font-size: var(--font-xs);">Elevated<br>#1F1F1F</div>
+                    </div>
+                </div>
+
+                <h3 style="margin: 2rem 0 1rem; font-size: var(--font-lg);">Accent Colors</h3>
+                <div>
+                    <div class="color-swatch" style="background: var(--color-accent-blue);">
+                        <div style="padding: 1rem; font-size: var(--font-xs);">Blue<br>#4DA6FF</div>
+                    </div>
+                    <div class="color-swatch" style="background: var(--color-accent-purple);">
+                        <div style="padding: 1rem; font-size: var(--font-xs);">Purple<br>#8B5CF6</div>
+                    </div>
+                    <div class="color-swatch" style="background: var(--color-accent-red);">
+                        <div style="padding: 1rem; font-size: var(--font-xs);">Red<br>#FF4D6D</div>
+                    </div>
+                    <div class="color-swatch" style="background: var(--color-accent-pink);">
+                        <div style="padding: 1rem; font-size: var(--font-xs);">Pink<br>#FF6BCB</div>
+                    </div>
+                </div>
+
+                <h3 style="margin: 2rem 0 1rem; font-size: var(--font-lg);">Gradients</h3>
+                <div>
+                    <div class="color-swatch" style="background: var(--gradient-blue-purple); width: 200px;">
+                        <div style="padding: 1rem; font-size: var(--font-xs);">Blue → Purple</div>
+                    </div>
+                    <div class="color-swatch" style="background: var(--gradient-purple-pink); width: 200px;">
+                        <div style="padding: 1rem; font-size: var(--font-xs);">Purple → Pink</div>
+                    </div>
+                    <div class="color-swatch" style="background: var(--gradient-anime); width: 200px;">
+                        <div style="padding: 1rem; font-size: var(--font-xs);">Anime Gradient</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Typography -->
+            <div class="preview-section">
+                <h2 class="preview-title">📝 Typography</h2>
+                
+                <div class="text-sample">
+                    <h1>Heading 1 - Extra Large Title</h1>
+                    <p style="color: var(--color-text-muted); font-size: var(--font-sm);">Font: Poppins Black, Size: 3.5rem (56px)</p>
+                </div>
+
+                <div class="text-sample">
+                    <h2>Heading 2 - Large Section Title</h2>
+                    <p style="color: var(--color-text-muted); font-size: var(--font-sm);">Font: Poppins Extrabold, Size: 2.5rem (40px)</p>
+                </div>
+
+                <div class="text-sample">
+                    <h3>Heading 3 - Medium Section Title</h3>
+                    <p style="color: var(--color-text-muted); font-size: var(--font-sm);">Font: Poppins Bold, Size: 2rem (32px)</p>
+                </div>
+
+                <div class="text-sample">
+                    <h4>Heading 4 - Card Title</h4>
+                    <p style="color: var(--color-text-muted); font-size: var(--font-sm);">Font: Poppins Bold, Size: 1.5rem (24px)</p>
+                </div>
+
+                <div class="text-sample">
+                    <p style="font-size: var(--font-lg);">Large paragraph text - Used for hero descriptions and important content. This is Inter Regular at 18px.</p>
+                </div>
+
+                <div class="text-sample">
+                    <p>Regular paragraph text - The standard body copy size. Readable and comfortable for longer content. This is Inter Regular at 16px.</p>
+                </div>
+
+                <div class="text-sample">
+                    <p style="font-size: var(--font-sm); color: var(--color-text-secondary);">Small text - Used for captions, labels, and secondary information. This is Inter Regular at 14px.</p>
+                </div>
+
+                <div class="text-sample">
+                    <span class="gradient-text" style="font-size: var(--font-3xl);">Gradient Text Effect</span>
+                    <p style="color: var(--color-text-muted); font-size: var(--font-sm);">Used for emphasis and key phrases</p>
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="preview-section">
+                <h2 class="preview-title">🔘 Buttons</h2>
+                
+                <div class="component-row">
+                    <button class="btn btn-primary btn-large">Primary Large</button>
+                    <button class="btn btn-primary">Primary Default</button>
+                    <button class="btn btn-primary btn-small">Primary Small</button>
+                </div>
+
+                <div class="component-row">
+                    <button class="btn btn-secondary btn-large">Secondary Large</button>
+                    <button class="btn btn-secondary">Secondary Default</button>
+                    <button class="btn btn-secondary btn-small">Secondary Small</button>
+                </div>
+
+                <div class="component-row">
+                    <button class="btn btn-outline btn-large">Outline Large</button>
+                    <button class="btn btn-outline">Outline Default</button>
+                    <button class="btn btn-outline btn-small">Outline Small</button>
+                </div>
+            </div>
+
+            <!-- Cards -->
+            <div class="preview-section">
+                <h2 class="preview-title">🃏 Cards</h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                    <div class="card">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🎨</div>
+                        <h3 style="margin-bottom: 0.5rem;">Standard Card</h3>
+                        <p style="color: var(--color-text-secondary);">Default card with hover effect. Translates up and shows shadow on hover.</p>
+                    </div>
+
+                    <div class="card card-elevated">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">✨</div>
+                        <h3 style="margin-bottom: 0.5rem;">Elevated Card</h3>
+                        <p style="color: var(--color-text-secondary);">Card with additional elevation and shadow for emphasis.</p>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background: var(--gradient-blue-purple); height: 200px; display: flex; align-items: center; justify-content: center; font-size: 4rem;">
+                            📱
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Product Card</h3>
+                            <p style="color: var(--color-text-secondary); margin: 0.5rem 0;">Product description text</p>
+                            <div class="product-price">$29.99</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form Inputs -->
+            <div class="preview-section">
+                <h2 class="preview-title">📝 Form Inputs</h2>
+                
+                <div style="max-width: 600px;">
+                    <div style="margin-bottom: 1.5rem;">
+                        <label class="form-label">Text Input</label>
+                        <input type="text" placeholder="Enter text here...">
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label class="form-label">Email Input</label>
+                        <input type="email" placeholder="email@example.com">
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label class="form-label">Select Dropdown</label>
+                        <select>
+                            <option>Choose an option...</option>
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                        </select>
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label class="form-label">Textarea</label>
+                        <textarea placeholder="Enter your message..." rows="4"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Badges & Labels -->
+            <div class="preview-section">
+                <h2 class="preview-title">🏷️ Badges & Labels</h2>
+                
+                <div class="component-row">
+                    <span class="hero-badge">✨ New Collection</span>
+                    <span class="hero-badge">🔥 Limited Time</span>
+                    <span class="hero-badge">💯 Premium Quality</span>
+                    <span class="hero-badge">⚡ Fast Shipping</span>
+                </div>
+            </div>
+
+            <!-- Icons & Emojis -->
+            <div class="preview-section">
+                <h2 class="preview-title">🎯 Icons (Emoji)</h2>
+                
+                <div style="font-size: 2.5rem; display: flex; gap: 2rem; flex-wrap: wrap;">
+                    <span>🎨</span>
+                    <span>📱</span>
+                    <span>✨</span>
+                    <span>📸</span>
+                    <span>📦</span>
+                    <span>🚚</span>
+                    <span>💯</span>
+                    <span>⚡</span>
+                    <span>🛡️</span>
+                    <span>🌍</span>
+                    <span>💬</span>
+                    <span>📧</span>
+                    <span>❓</span>
+                    <span>🛒</span>
+                    <span>⭐</span>
+                    <span>🔥</span>
+                </div>
+                <p style="color: var(--color-text-secondary); margin-top: 1rem;">
+                    Currently using emojis for icons. Can be replaced with icon library (Font Awesome, Heroicons, etc.)
+                </p>
+            </div>
+
+            <!-- Spacing -->
+            <div class="preview-section">
+                <h2 class="preview-title">📐 Spacing Scale</h2>
+                
+                <div style="display: grid; gap: 1rem;">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="background: var(--color-accent-blue); height: 20px; width: var(--space-xs);"></div>
+                        <span>xs: 0.5rem (8px)</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="background: var(--color-accent-blue); height: 20px; width: var(--space-sm);"></div>
+                        <span>sm: 1rem (16px)</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="background: var(--color-accent-blue); height: 20px; width: var(--space-md);"></div>
+                        <span>md: 1.5rem (24px)</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="background: var(--color-accent-blue); height: 20px; width: var(--space-lg);"></div>
+                        <span>lg: 2rem (32px)</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="background: var(--color-accent-blue); height: 20px; width: var(--space-xl);"></div>
+                        <span>xl: 3rem (48px)</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="background: var(--color-accent-blue); height: 20px; width: var(--space-2xl);"></div>
+                        <span>2xl: 4rem (64px)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shadows & Effects -->
+            <div class="preview-section">
+                <h2 class="preview-title">🌟 Shadows & Effects</h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+                    <div style="background: var(--color-bg-elevated); padding: 2rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);">
+                        <h4>Shadow SM</h4>
+                        <p style="color: var(--color-text-secondary); font-size: var(--font-sm);">Small shadow</p>
+                    </div>
+                    <div style="background: var(--color-bg-elevated); padding: 2rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
+                        <h4>Shadow MD</h4>
+                        <p style="color: var(--color-text-secondary); font-size: var(--font-sm);">Medium shadow</p>
+                    </div>
+                    <div style="background: var(--color-bg-elevated); padding: 2rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+                        <h4>Shadow LG</h4>
+                        <p style="color: var(--color-text-secondary); font-size: var(--font-sm);">Large shadow</p>
+                    </div>
+                    <div style="background: var(--color-bg-elevated); padding: 2rem; border-radius: var(--radius-lg); box-shadow: var(--glow-blue);">
+                        <h4>Glow Blue</h4>
+                        <p style="color: var(--color-text-secondary); font-size: var(--font-sm);">Neon glow effect</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation to Pages -->
+            <div style="text-align: center; margin-top: 4rem; padding: 3rem; background: var(--color-bg-card); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-xl);">
+                <h2 style="font-size: var(--font-3xl); margin-bottom: 1.5rem;">
+                    View Live Pages
+                </h2>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="index-new.html" class="btn btn-primary btn-large">Landing Page</a>
+                    <a href="product-new.html" class="btn btn-primary btn-large">Product Page</a>
+                    <a href="faq-new.html" class="btn btn-primary btn-large">FAQ Page</a>
+                    <a href="contact-new.html" class="btn btn-primary btn-large">Contact Page</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+                <p>&copy; 2026 Anime Case - Design System Preview</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
+
+        // Navbar Scroll Effect
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

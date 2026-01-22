@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Create your custom anime-style phone case. Upload your selfie, choose your phone model, and get a premium case with your photo as anime art.">
+    <meta name="keywords" content="custom anime phone case, personalized phone case, anime art phone case, photo to anime">
+    
+    <title>Custom Anime Phone Case - Upload Your Photo | Anime Case</title>
+    
+    <!-- 
+        SHOPIFY MIGRATION NOTE:
+        - This will become product.liquid template
+        - Replace static content with {{ product.* }} Liquid objects
+        - Use {{ product.featured_image | img_url }} for product images
+    -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">ANIME CASE</a>
+            </div>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html" class="active">Product</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" class="cart-link">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count">0</span>
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Product Hero Section -->
+    <section class="product-hero" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%); padding: 3rem 0 1rem 0; position: relative; overflow: hidden;">
+        <div class="floating-decoration" style="position: absolute; top: 10%; left: 5%; font-size: 3rem; opacity: 0.2; animation: float 4s ease-in-out infinite;">🎨</div>
+        <div class="floating-decoration" style="position: absolute; top: 20%; right: 8%; font-size: 2.5rem; opacity: 0.2; animation: bounce 3s ease-in-out infinite; animation-delay: 0.5s;">✨</div>
+        <div class="floating-decoration" style="position: absolute; bottom: 15%; left: 10%; font-size: 2.8rem; opacity: 0.2; animation: swing 4s ease-in-out infinite; animation-delay: 1s;">📱</div>
+        <div class="floating-decoration" style="position: absolute; bottom: 10%; right: 12%; font-size: 3rem; opacity: 0.2; animation: wiggle 3.5s ease-in-out infinite;">🌟</div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <div style="text-align: center; color: white; margin-bottom: 2rem;">
+                <span style="display: inline-block; background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 0.9rem; margin-bottom: 1rem; animation: bounce 2s ease-in-out infinite;">✨ Custom Made Just For You</span>
+                <h1 style="font-size: 3rem; font-weight: 900; margin-bottom: 1rem; text-shadow: 0 4px 20px rgba(0,0,0,0.3);">Create Your Dream Anime Case</h1>
+                <p style="font-size: 1.2rem; opacity: 0.95; max-width: 600px; margin: 0 auto;">Upload your photo and watch the magic happen! ✨</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section class="product-section" style="background: linear-gradient(180deg, #f8f9ff 0%, #ffffff 100%); position: relative;">
+        <div class="container">
+            <div class="product-grid">
+                <!-- Product Images -->
+                <div class="product-images" style="position: relative;">
+                    <!-- 
+                        SHOPIFY MIGRATION:
+                        - Replace with {{ product.images | product_img_select }}
+                        - Use Shopify product image gallery
+                    -->
+                    <div class="main-image" style="position: relative; background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%); border-radius: 30px; padding: 3rem; box-shadow: 0 20px 60px rgba(102, 126, 234, 0.4); animation: float 4s ease-in-out infinite;">
+                        <div class="image-placeholder" style="background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-radius: 20px; padding: 3rem; text-align: center; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: inset 0 4px 20px rgba(0,0,0,0.1);">
+                            <span class="placeholder-icon" style="font-size: 5rem; display: block; margin-bottom: 1.5rem; animation: bounce 2s ease-in-out infinite;">📱</span>
+                            <p style="font-size: 1.5rem; font-weight: 700; color: #667eea; margin-bottom: 0.5rem;">Custom Anime Phone Case</p>
+                            <small style="color: #666; font-size: 1rem;">Your photo will be transformed into anime art here</small>
+                            <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+                                <span style="font-size: 2rem; animation: pulse 2s ease-in-out infinite;">🎨</span>
+                                <span style="font-size: 2rem; animation: pulse 2s ease-in-out infinite; animation-delay: 0.3s;">✨</span>
+                                <span style="font-size: 2rem; animation: pulse 2s ease-in-out infinite; animation-delay: 0.6s;">🌟</span>
+                            </div>
+                        </div>
+                        <div style="position: absolute; top: -10px; right: -10px; background: linear-gradient(135deg, #feca57, #ff6b6b); color: white; padding: 0.8rem 1.5rem; border-radius: 50px; font-weight: 700; font-size: 0.9rem; box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4); animation: bounce 2s ease-in-out infinite; z-index: 10;">⚡ LIMITED TIME</div>
+                    </div>
+                    
+                    <div class="thumbnail-images" style="display: flex; gap: 1rem; margin-top: 1.5rem; justify-content: center;">
+                        <div class="thumbnail active" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; width: 80px; height: 80px; border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 2rem; cursor: pointer; box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3); transition: all 0.3s; border: 3px solid #667eea;">
+                            <span>🎨</span>
+                        </div>
+                        <div class="thumbnail" style="background: linear-gradient(135deg, #f093fb, #f5576c); color: white; width: 80px; height: 80px; border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 2rem; cursor: pointer; box-shadow: 0 10px 30px rgba(240, 147, 251, 0.3); transition: all 0.3s; opacity: 0.7;">
+                            <span>✨</span>
+                        </div>
+                        <div class="thumbnail" style="background: linear-gradient(135deg, #4facfe, #00f2fe); color: white; width: 80px; height: 80px; border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 2rem; cursor: pointer; box-shadow: 0 10px 30px rgba(79, 172, 254, 0.3); transition: all 0.3s; opacity: 0.7;">
+                            <span>📸</span>
+                        </div>
+                    </div>
+
+                    <!-- Product Description Section -->
+                    <div style="margin-top: 2rem; background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(240, 147, 251, 0.05)); border-radius: 20px; padding: 1.8rem; border: 1px solid rgba(102, 126, 234, 0.2);">
+                        <h3 style="font-size: 1.4rem; font-weight: 800; color: #2d3436; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="font-size: 1.8rem;">✨</span> Why Choose Our Custom Cases?
+                        </h3>
+                        <p style="color: #555; line-height: 1.7; font-size: 0.95rem; margin-bottom: 1rem;">
+                            Transform your favorite selfie into stunning anime artwork! Our talented artists hand-refine each design to capture your unique personality in vibrant anime style. Perfect for expressing yourself or giving as a truly one-of-a-kind gift.
+                        </p>
+                        <p style="color: #555; line-height: 1.7; font-size: 0.95rem; margin-bottom: 0;">
+                            Every case is printed with premium UV-resistant inks on durable, scratch-resistant materials that protect your phone while showcasing your custom art. We guarantee you'll love it or we'll make it right!
+                        </p>
+                    </div>
+
+                    <!-- Key Features Cards -->
+                    <div style="margin-top: 2rem; display: grid; gap: 1rem;">
+                        <div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(102, 126, 234, 0.05)); border: 2px solid rgba(102, 126, 234, 0.3); border-radius: 15px; padding: 1.2rem; display: flex; align-items: center; gap: 1rem;">
+                            <span style="font-size: 2.5rem;">⚡</span>
+                            <div>
+                                <h4 style="font-weight: 700; color: #2d3436; margin-bottom: 0.3rem; font-size: 1rem;">Fast Turnaround</h4>
+                                <p style="color: #666; font-size: 0.9rem; margin: 0;">Ready in 3-5 business days</p>
+                            </div>
+                        </div>
+                        <div style="background: linear-gradient(135deg, rgba(240, 147, 251, 0.1), rgba(240, 147, 251, 0.05)); border: 2px solid rgba(240, 147, 251, 0.3); border-radius: 15px; padding: 1.2rem; display: flex; align-items: center; gap: 1rem;">
+                            <span style="font-size: 2.5rem;">🎨</span>
+                            <div>
+                                <h4 style="font-weight: 700; color: #2d3436; margin-bottom: 0.3rem; font-size: 1rem;">Professional Art</h4>
+                                <p style="color: #666; font-size: 0.9rem; margin: 0;">Hand-refined by anime artists</p>
+                            </div>
+                        </div>
+                        <div style="background: linear-gradient(135deg, rgba(79, 172, 254, 0.1), rgba(79, 172, 254, 0.05)); border: 2px solid rgba(79, 172, 254, 0.3); border-radius: 15px; padding: 1.2rem; display: flex; align-items: center; gap: 1rem;">
+                            <span style="font-size: 2.5rem;">🛡️</span>
+                            <div>
+                                <h4 style="font-weight: 700; color: #2d3436; margin-bottom: 0.3rem; font-size: 1rem;">Premium Quality</h4>
+                                <p style="color: #666; font-size: 0.9rem; margin: 0;">Durable & scratch-resistant</p>
+                            </div>
+                        </div>
+                        <div style="background: linear-gradient(135deg, rgba(254, 202, 87, 0.1), rgba(254, 202, 87, 0.05)); border: 2px solid rgba(254, 202, 87, 0.5); border-radius: 15px; padding: 1.2rem; display: flex; align-items: center; gap: 1rem;">
+                            <span style="font-size: 2.5rem;">💯</span>
+                            <div>
+                                <h4 style="font-weight: 700; color: #2d3436; margin-bottom: 0.3rem; font-size: 1rem;">100% Satisfaction</h4>
+                                <p style="color: #666; font-size: 0.9rem; margin: 0;">Free revision if not happy</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Customer Trust Badge -->
+                    <div style="margin-top: 2rem; background: linear-gradient(135deg, rgba(67, 233, 123, 0.15), rgba(56, 249, 215, 0.15)); border: 2px solid rgba(67, 233, 123, 0.4); border-radius: 20px; padding: 1.5rem; text-align: center;">
+                        <div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 1.5rem;">
+                            <div>
+                                <p style="font-size: 2rem; font-weight: 900; color: #43e97b; margin: 0;">500+</p>
+                                <p style="font-size: 0.9rem; color: #666; margin: 0.3rem 0 0 0;">Happy Customers</p>
+                            </div>
+                            <div>
+                                <p style="font-size: 2rem; font-weight: 900; color: #43e97b; margin: 0;">4.9★</p>
+                                <p style="font-size: 0.9rem; color: #666; margin: 0.3rem 0 0 0;">Average Rating</p>
+                            </div>
+                            <div>
+                                <p style="font-size: 2rem; font-weight: 900; color: #43e97b; margin: 0;">98%</p>
+                                <p style="font-size: 0.9rem; color: #666; margin: 0.3rem 0 0 0;">Would Recommend</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Details -->
+                <div class="product-details">
+                    <!-- 
+                        SHOPIFY MIGRATION:
+                        - Replace title with {{ product.title }}
+                        - Replace price with {{ product.price | money }}
+                        - Use {{ product.compare_at_price | money }} for strikethrough price
+                    -->
+                    <div style="display: inline-block; background: linear-gradient(135deg, #feca57, #ff6b6b); color: white; padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.85rem; font-weight: 700; margin-bottom: 1rem; animation: pulse 2s ease-in-out infinite;">🔥 BESTSELLER</div>
+                    <h1 class="product-title" style="font-size: 2.5rem; font-weight: 900; color: #2d3436; margin-bottom: 1rem; line-height: 1.2;">Custom Anime-Style Phone Case</h1>
+                    
+                    <div class="product-price" style="margin-bottom: 1.5rem;">
+                        <span class="current-price" style="font-size: 3rem; font-weight: 900; background: linear-gradient(135deg, #667eea, #f093fb); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">$49.99</span>
+                        <span class="original-price" style="font-size: 1.5rem; color: #999; text-decoration: line-through; margin-left: 1rem;">$69.99</span>
+                        <span style="display: inline-block; background: linear-gradient(135deg, #43e97b, #38f9d7); color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.9rem; font-weight: 700; margin-left: 1rem;">SAVE $20</span>
+                    </div>
+                    
+                    <div class="product-rating" style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+                        <span class="stars" style="font-size: 1.5rem; filter: drop-shadow(0 2px 4px rgba(255, 193, 7, 0.3));">⭐⭐⭐⭐⭐</span>
+                        <span class="rating-text" style="color: #666; font-weight: 600;">(127 reviews)</span>
+                        <span style="color: #43e97b; font-weight: 700; display: flex; align-items: center; gap: 0.3rem;">✓ Verified Buyers</span>
+                    </div>
+                    
+                    <!-- 
+                        SHOPIFY: Replace with {{ product.description }}
+                    -->
+                    <div class="product-description">
+                        <p>Transform your favorite selfie into stunning anime-style artwork on a premium, durable phone case. Each case is custom-made with high-quality materials and vibrant, long-lasting prints.</p>
+                        
+                        <ul class="product-features">
+                            <li>✅ Professional anime art transformation</li>
+                            <li>✅ Premium scratch-resistant material</li>
+                            <li>✅ Precise cutouts for all buttons & ports</li>
+                            <li>✅ Vibrant, fade-resistant printing</li>
+                            <li>✅ Slim, lightweight design</li>
+                        </ul>
+                    </div>
+
+                    <!-- File Upload Section -->
+                    <div class="product-option" style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(240, 147, 251, 0.05)); padding: 0.75rem; border-radius: 20px; border: 2px dashed #667eea; margin-bottom: 1.5rem;">
+                        <label class="option-label required" style="display: flex; align-items: center; gap: 0.5rem; font-size: 1.1rem; font-weight: 700; color: #2d3436; margin-bottom: 0.5rem;">
+                            <span style="font-size: 1.5rem;">📸</span> Upload Your Selfie
+                            <span class="required-badge" style="background: linear-gradient(135deg, #ff6b6b, #feca57); color: white; padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.75rem; animation: pulse 2s ease-in-out infinite;">Required</span>
+                        </label>
+                        <p class="option-help" style="color: #666; font-size: 0.95rem; margin-bottom: 1rem;">Upload a clear, well-lit photo of yourself (front-facing recommended)</p>
+                        
+                        <!-- 
+                            SHOPIFY MIGRATION:
+                            - File uploads will be handled as line item properties
+                            - Use properties[_selfie_image] in the form
+                            - May need a Shopify app for file uploads (e.g., Infinite Options, Product Customizer)
+                            - Alternatively, customers can email files after checkout
+                        -->
+                        <div class="file-upload-area" id="selfieUpload">
+                            <input type="file" id="selfieInput" accept="image/*" class="file-input" required>
+                            <div class="upload-placeholder">
+                                <span class="upload-icon">📸</span>
+                                <p class="upload-text">Click to upload or drag & drop</p>
+                                <small>PNG, JPG up to 10MB</small>
+                            </div>
+                            <div class="file-preview" style="display: none;">
+                                <img src="" alt="Preview" class="preview-image">
+                                <button type="button" class="remove-file" aria-label="Remove file">×</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Optional Reference Image -->
+                    <div class="product-option" style="background: linear-gradient(135deg, rgba(240, 147, 251, 0.05), rgba(245, 87, 108, 0.05)); padding: 0.75rem; border-radius: 20px; border: 2px dashed #f093fb; margin-bottom: 1.5rem;">
+                        <label class="option-label" style="display: flex; align-items: center; gap: 0.5rem; font-size: 1.1rem; font-weight: 700; color: #2d3436; margin-bottom: 0.5rem;">
+                            <span style="font-size: 1.5rem;">🎨</span> Reference Image (Optional)
+                        </label>
+                        <p class="option-help" style="color: #666; font-size: 0.95rem; margin-bottom: 1rem;">Upload an anime style you'd like us to reference</p>
+                        
+                        <!-- SHOPIFY: Will be properties[_reference_image] -->
+                        <div class="file-upload-area" id="referenceUpload">
+                            <input type="file" id="referenceInput" accept="image/*" class="file-input">
+                            <div class="upload-placeholder">
+                                <span class="upload-icon">🎨</span>
+                                <p class="upload-text">Click to upload or drag & drop</p>
+                                <small>PNG, JPG up to 10MB</small>
+                            </div>
+                            <div class="file-preview" style="display: none;">
+                                <img src="" alt="Preview" class="preview-image">
+                                <button type="button" class="remove-file" aria-label="Remove file">×</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phone Model Selection -->
+                    <div class="product-option" style="background: linear-gradient(135deg, rgba(79, 172, 254, 0.05), rgba(0, 242, 254, 0.05)); padding: 1.5rem; border-radius: 20px; border: 2px solid rgba(79, 172, 254, 0.3); margin-bottom: 1.5rem;">
+                        <label class="option-label required" style="display: flex; align-items: center; gap: 0.5rem; font-size: 1.1rem; font-weight: 700; color: #2d3436; margin-bottom: 0.5rem;">
+                            <span style="font-size: 1.5rem;">📱</span> Phone Model
+                            <span class="required-badge" style="background: linear-gradient(135deg, #ff6b6b, #feca57); color: white; padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.75rem; animation: pulse 2s ease-in-out infinite;">Required</span>
+                        </label>
+                        
+                        <!-- 
+                            SHOPIFY MIGRATION:
+                            - Replace with {{ product.variants }} loop
+                            - Use variant selector: {% form 'product', product %}
+                            - Each variant = different phone model
+                            - Update price dynamically based on variant selection
+                        -->
+                        <select id="phoneModel" class="product-select" required>
+                            <option value="">Select your phone model</option>
+                            <optgroup label="iPhone">
+                                <option value="iphone-15-pro-max">iPhone 15 Pro Max</option>
+                                <option value="iphone-15-pro">iPhone 15 Pro</option>
+                                <option value="iphone-15-plus">iPhone 15 Plus</option>
+                                <option value="iphone-15">iPhone 15</option>
+                                <option value="iphone-14-pro-max">iPhone 14 Pro Max</option>
+                                <option value="iphone-14-pro">iPhone 14 Pro</option>
+                                <option value="iphone-14-plus">iPhone 14 Plus</option>
+                                <option value="iphone-14">iPhone 14</option>
+                                <option value="iphone-13-pro-max">iPhone 13 Pro Max</option>
+                                <option value="iphone-13-pro">iPhone 13 Pro</option>
+                                <option value="iphone-13">iPhone 13</option>
+                                <option value="iphone-12-pro-max">iPhone 12 Pro Max</option>
+                                <option value="iphone-12-pro">iPhone 12 Pro</option>
+                                <option value="iphone-12">iPhone 12</option>
+                            </optgroup>
+                            <optgroup label="Samsung Galaxy">
+                                <option value="galaxy-s24-ultra">Galaxy S24 Ultra</option>
+                                <option value="galaxy-s24-plus">Galaxy S24+</option>
+                                <option value="galaxy-s24">Galaxy S24</option>
+                                <option value="galaxy-s23-ultra">Galaxy S23 Ultra</option>
+                                <option value="galaxy-s23-plus">Galaxy S23+</option>
+                                <option value="galaxy-s23">Galaxy S23</option>
+                                <option value="galaxy-s22-ultra">Galaxy S22 Ultra</option>
+                                <option value="galaxy-s22-plus">Galaxy S22+</option>
+                                <option value="galaxy-s22">Galaxy S22</option>
+                            </optgroup>
+                            <optgroup label="Google Pixel">
+                                <option value="pixel-8-pro">Pixel 8 Pro</option>
+                                <option value="pixel-8">Pixel 8</option>
+                                <option value="pixel-7-pro">Pixel 7 Pro</option>
+                                <option value="pixel-7">Pixel 7</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <!-- Order Notes -->
+                    <div class="product-option">
+                        <label class="option-label">
+                            Special Instructions (Optional)
+                        </label>
+                        <p class="option-help">Any specific requests or details about the anime style you want?</p>
+                        
+                        <!-- 
+                            SHOPIFY: Will become cart.attributes[order_notes] or line item property
+                        -->
+                        <textarea 
+                            id="orderNotes" 
+                            class="product-textarea" 
+                            placeholder="E.g., 'I prefer bright colors,' 'Make eyes bigger,' 'Studio Ghibli style,' etc."
+                            rows="4"
+                        ></textarea>
+                    </div>
+
+                    <!-- Quantity Selector -->
+                    <div class="product-option">
+                        <label class="option-label">Quantity</label>
+                        <div class="quantity-selector">
+                            <button type="button" class="quantity-btn" id="decreaseQty" aria-label="Decrease quantity">−</button>
+                            <input type="number" id="quantity" class="quantity-input" value="1" min="1" max="10">
+                            <button type="button" class="quantity-btn" id="increaseQty" aria-label="Increase quantity">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Add to Cart Button -->
+                    <!-- 
+                        SHOPIFY MIGRATION:
+                        - Replace with proper Shopify cart form
+                        - Use {% form 'product', product %}
+                        - Button submits to /cart/add.js (Ajax API)
+                        - Include variant_id, quantity, and properties
+                    -->
+                    <div class="product-actions" style="margin-top: 2rem;">
+                        <button type="button" id="addToCartBtn" class="btn btn-primary btn-large btn-full" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 1.5rem; border-radius: 15px; font-size: 1.3rem; font-weight: 800; border: none; cursor: pointer; width: 100%; margin-bottom: 1rem; box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4); transition: all 0.3s; position: relative; overflow: hidden;">
+                            🛒 Add to Cart - $49.99
+                        </button>
+                        
+                        <button type="button" class="btn btn-secondary btn-large btn-full" style="background: linear-gradient(135deg, #feca57, #ff6b6b); color: white; padding: 1.5rem; border-radius: 15px; font-size: 1.3rem; font-weight: 800; border: none; cursor: pointer; width: 100%; box-shadow: 0 15px 40px rgba(255, 107, 107, 0.4); transition: all 0.3s; animation: pulse 2s ease-in-out infinite;">
+                            ⚡ Buy It Now - Fast Checkout
+                        </button>
+                    </div>
+
+                    <!-- Trust Badges -->
+                    <div class="trust-badges" style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
+                        <div class="trust-badge" style="flex: 1; min-width: 120px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); padding: 1rem; border-radius: 15px; text-align: center; border: 2px solid rgba(102, 126, 234, 0.2);">
+                            <span style="font-size: 2rem; display: block; margin-bottom: 0.5rem;">🔒</span>
+                            <small style="font-weight: 600; color: #667eea; display: block;">Secure Checkout</small>
+                        </div>
+                        <div class="trust-badge" style="flex: 1; min-width: 120px; background: linear-gradient(135deg, rgba(67, 233, 123, 0.1), rgba(56, 249, 215, 0.1)); padding: 1rem; border-radius: 15px; text-align: center; border: 2px solid rgba(67, 233, 123, 0.2);">
+                            <span style="font-size: 2rem; display: block; margin-bottom: 0.5rem;">🚚</span>
+                            <small style="font-weight: 600; color: #43e97b; display: block;">Fast Shipping</small>
+                        </div>
+                        <div class="trust-badge" style="flex: 1; min-width: 120px; background: linear-gradient(135deg, rgba(254, 202, 87, 0.1), rgba(255, 107, 107, 0.1)); padding: 1rem; border-radius: 15px; text-align: center; border: 2px solid rgba(254, 202, 87, 0.2);">
+                            <span style="font-size: 2rem; display: block; margin-bottom: 0.5rem;">↩️</span>
+                            <small style="font-weight: 600; color: #ff6b6b; display: block;">Easy Returns</small>
+                        </div>
+                    </div>
+
+                    <!-- Delivery Info -->
+                    <div class="delivery-info" style="background: linear-gradient(135deg, rgba(240, 147, 251, 0.1), rgba(245, 87, 108, 0.1)); padding: 1.5rem; border-radius: 15px; margin-top: 2rem; border-left: 4px solid #f093fb;">
+                        <p style="margin-bottom: 0.5rem; color: #2d3436; font-weight: 600;"><strong style="font-size: 1.1rem;">📦 Estimated Delivery:</strong> 7-10 business days</p>
+                        <p style="color: #2d3436; font-weight: 600;"><strong style="font-size: 1.1rem;">✨ Processing Time:</strong> 2-3 days for artwork creation</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Tabs / Additional Info -->
+            <div class="product-tabs" style="margin-top: 4rem; background: white; padding: 2rem; border-radius: 30px; box-shadow: 0 20px 60px rgba(0,0,0,0.1);">
+                <div class="tab-buttons" style="display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; justify-content: center;">
+                    <button class="tab-btn active" data-tab="details" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 1rem 2rem; border-radius: 50px; font-weight: 700; border: none; cursor: pointer; transition: all 0.3s; box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);">📋 Details</button>
+                    <button class="tab-btn" data-tab="guidelines" style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); color: #667eea; padding: 1rem 2rem; border-radius: 50px; font-weight: 700; border: 2px solid #667eea; cursor: pointer; transition: all 0.3s;">📸 Image Guidelines</button>
+                    <button class="tab-btn" data-tab="shipping" style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); color: #667eea; padding: 1rem 2rem; border-radius: 50px; font-weight: 700; border: 2px solid #667eea; cursor: pointer; transition: all 0.3s;">🚚 Shipping & Returns</button>
+                </div>
+
+                <div class="tab-content active" id="details">
+                    <h3>Product Details</h3>
+                    <ul>
+                        <li><strong>Material:</strong> Premium polycarbonate with TPU bumper</li>
+                        <li><strong>Finish:</strong> Glossy with UV-resistant coating</li>
+                        <li><strong>Protection:</strong> Shock-absorbent, scratch-resistant</li>
+                        <li><strong>Design:</strong> Slim profile with raised edges for screen protection</li>
+                        <li><strong>Printing:</strong> High-resolution, edge-to-edge printing</li>
+                        <li><strong>Compatibility:</strong> Precise fit with easy button access</li>
+                    </ul>
+                </div>
+
+                <div class="tab-content" id="guidelines">
+                    <h3>Photo Guidelines for Best Results</h3>
+                    <ul>
+                        <li>✅ Use a clear, well-lit photo (natural light is best)</li>
+                        <li>✅ Face should be clearly visible and in focus</li>
+                        <li>✅ Front-facing or 3/4 angle works best</li>
+                        <li>✅ High resolution (at least 1000x1000 pixels)</li>
+                        <li>✅ Avoid heavily filtered or edited photos</li>
+                        <li>❌ Avoid blurry, dark, or low-quality images</li>
+                        <li>❌ Avoid sunglasses or face coverings</li>
+                        <li>❌ Group photos (unless you specify which person)</li>
+                    </ul>
+                </div>
+
+                <div class="tab-content" id="shipping">
+                    <h3>Shipping & Returns</h3>
+                    <p><strong>Processing Time:</strong> 2-3 business days for artwork creation + 1-2 days for production</p>
+                    <p><strong>Shipping:</strong> 5-7 business days (standard), 2-3 days (express available)</p>
+                    <p><strong>Returns:</strong> We offer free revisions if you're not happy with the artwork. Physical cases can be returned within 30 days if defective.</p>
+                    <p><strong>Custom Orders:</strong> Since each case is custom-made, we cannot accept returns for change of mind. Please ensure your photo and phone model are correct before ordering.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%); padding: 5rem 0; position: relative; overflow: hidden;">
+        <div class="floating-decoration" style="position: absolute; top: 15%; left: 8%; font-size: 3rem; opacity: 0.15; animation: float 4s ease-in-out infinite;">⭐</div>
+        <div class="floating-decoration" style="position: absolute; bottom: 20%; right: 10%; font-size: 2.5rem; opacity: 0.15; animation: bounce 3s ease-in-out infinite;">💬</div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <h2 style="text-align: center; font-size: 2.8rem; font-weight: 900; color: white; margin-bottom: 1rem; text-shadow: 0 4px 20px rgba(0,0,0,0.2);">What Our Customers Say ❤️</h2>
+            <p style="text-align: center; color: rgba(255,255,255,0.9); font-size: 1.2rem; margin-bottom: 3rem;">Join 10,000+ happy customers who love their custom anime cases!</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div style="background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-radius: 20px; padding: 2rem; box-shadow: 0 20px 60px rgba(0,0,0,0.2);">
+                    <div style="display: flex; gap: 1rem; margin-bottom: 1rem; align-items: center;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #667eea, #764ba2); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">👧</div>
+                        <div>
+                            <h4 style="font-weight: 700; color: #2d3436; margin-bottom: 0.2rem;">Sarah M.</h4>
+                            <span style="color: #feca57; font-size: 1.2rem;">⭐⭐⭐⭐⭐</span>
+                        </div>
+                    </div>
+                    <p style="color: #636e72; font-size: 1rem; line-height: 1.6;">"Absolutely love my custom anime case! The artwork is incredible and the quality is top-notch. Got so many compliments! 😍"</p>
+                </div>
+                
+                <div style="background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-radius: 20px; padding: 2rem; box-shadow: 0 20px 60px rgba(0,0,0,0.2);">
+                    <div style="display: flex; gap: 1rem; margin-bottom: 1rem; align-items: center;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #f093fb, #f5576c); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">👨</div>
+                        <div>
+                            <h4 style="font-weight: 700; color: #2d3436; margin-bottom: 0.2rem;">Mike T.</h4>
+                            <span style="color: #feca57; font-size: 1.2rem;">⭐⭐⭐⭐⭐</span>
+                        </div>
+                    </div>
+                    <p style="color: #636e72; font-size: 1rem; line-height: 1.6;">"Best purchase ever! The anime transformation is amazing. Shipping was fast and customer service was super helpful. Highly recommend! 🔥"</p>
+                </div>
+                
+                <div style="background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-radius: 20px; padding: 2rem; box-shadow: 0 20px 60px rgba(0,0,0,0.2);">
+                    <div style="display: flex; gap: 1rem; margin-bottom: 1rem; align-items: center;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #43e97b, #38f9d7); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">👩</div>
+                        <div>
+                            <h4 style="font-weight: 700; color: #2d3436; margin-bottom: 0.2rem;">Emma L.</h4>
+                            <span style="color: #feca57; font-size: 1.2rem;">⭐⭐⭐⭐⭐</span>
+                        </div>
+                    </div>
+                    <p style="color: #636e72; font-size: 1rem; line-height: 1.6;">"Perfect gift for my anime-loving friend! She couldn't believe how good the artwork looked. Will definitely order again! ✨"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section style="background: linear-gradient(180deg, #ffffff 0%, #f8f9ff 100%); padding: 5rem 0;">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.8rem; font-weight: 900; background: linear-gradient(135deg, #667eea, #f093fb); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 1rem;">How It Works 🎨</h2>
+            <p style="text-align: center; color: #666; font-size: 1.2rem; margin-bottom: 3rem;">Get your custom anime case in 3 simple steps!</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem;">
+                <div style="text-align: center;">
+                    <div style="width: 100px; height: 100px; margin: 0 auto 1.5rem; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 3rem; box-shadow: 0 15px 40px rgba(102, 126, 234, 0.3); animation: bounce 2s ease-in-out infinite;">📸</div>
+                    <div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; margin: 0 auto 1rem; font-size: 1.2rem;">1</div>
+                    <h3 style="font-size: 1.5rem; font-weight: 700; color: #2d3436; margin-bottom: 0.5rem;">Upload Your Photo</h3>
+                    <p style="color: #666; line-height: 1.6;">Choose your favorite selfie and upload it to our platform</p>
+                </div>
+                
+                <div style="text-align: center;">
+                    <div style="width: 100px; height: 100px; margin: 0 auto 1.5rem; background: linear-gradient(135deg, #f093fb, #f5576c); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 3rem; box-shadow: 0 15px 40px rgba(240, 147, 251, 0.3); animation: bounce 2s ease-in-out infinite; animation-delay: 0.2s;">🎨</div>
+                    <div style="background: linear-gradient(135deg, #f093fb, #f5576c); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; margin: 0 auto 1rem; font-size: 1.2rem;">2</div>
+                    <h3 style="font-size: 1.5rem; font-weight: 700; color: #2d3436; margin-bottom: 0.5rem;">We Create Magic</h3>
+                    <p style="color: #666; line-height: 1.6;">Our artists transform your photo into stunning anime art</p>
+                </div>
+                
+                <div style="text-align: center;">
+                    <div style="width: 100px; height: 100px; margin: 0 auto 1.5rem; background: linear-gradient(135deg, #43e97b, #38f9d7); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 3rem; box-shadow: 0 15px 40px rgba(67, 233, 123, 0.3); animation: bounce 2s ease-in-out infinite; animation-delay: 0.4s;">📦</div>
+                    <div style="background: linear-gradient(135deg, #43e97b, #38f9d7); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; margin: 0 auto 1rem; font-size: 1.2rem;">3</div>
+                    <h3 style="font-size: 1.5rem; font-weight: 700; color: #2d3436; margin-bottom: 0.5rem;">Receive Your Case</h3>
+                    <p style="color: #666; line-height: 1.6;">Get your premium custom case delivered to your door</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" style="display: inline-block; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 1.2rem 3rem; border-radius: 50px; font-weight: 700; font-size: 1.2rem; text-decoration: none; box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4); transition: all 0.3s; animation: pulse 2s ease-in-out infinite;">🚀 Start Creating Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Quick Section -->
+    <section style="background: linear-gradient(135deg, #feca57 0%, #ff6b6b 50%, #f093fb 100%); padding: 5rem 0; position: relative; overflow: hidden;">
+        <div class="floating-decoration" style="position: absolute; top: 10%; right: 5%; font-size: 3rem; opacity: 0.15; animation: wiggle 4s ease-in-out infinite;">❓</div>
+        <div class="floating-decoration" style="position: absolute; bottom: 15%; left: 8%; font-size: 2.8rem; opacity: 0.15; animation: float 3.5s ease-in-out infinite;">💡</div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <h2 style="text-align: center; font-size: 2.8rem; font-weight: 900; color: white; margin-bottom: 3rem; text-shadow: 0 4px 20px rgba(0,0,0,0.2);">Quick Questions? 🤔</h2>
+            
+            <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem;">
+                <div style="background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-radius: 20px; padding: 2rem; box-shadow: 0 15px 40px rgba(0,0,0,0.2);">
+                    <h3 style="font-size: 1.3rem; font-weight: 700; color: #2d3436; margin-bottom: 0.8rem;">🕐 How long does it take?</h3>
+                    <p style="color: #636e72; line-height: 1.6;">2-3 days for artwork creation + 1-2 days production + 5-7 days shipping = Total 8-12 days</p>
+                </div>
+                
+                <div style="background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-radius: 20px; padding: 2rem; box-shadow: 0 15px 40px rgba(0,0,0,0.2);">
+                    <h3 style="font-size: 1.3rem; font-weight: 700; color: #2d3436; margin-bottom: 0.8rem;">💰 What if I don't like the artwork?</h3>
+                    <p style="color: #636e72; line-height: 1.6;">We offer FREE revisions! We'll work with you until you're 100% satisfied with your design.</p>
+                </div>
+                
+                <div style="background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-radius: 20px; padding: 2rem; box-shadow: 0 15px 40px rgba(0,0,0,0.2);">
+                    <h3 style="font-size: 1.3rem; font-weight: 700; color: #2d3436; margin-bottom: 0.8rem;">🎨 Can I request a specific anime style?</h3>
+                    <p style="color: #636e72; line-height: 1.6;">Absolutely! Just upload a reference image or mention the style in the special instructions box.</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2.5rem;">
+                <a href="faq.html" style="color: white; font-weight: 700; font-size: 1.1rem; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">View All FAQs →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 5rem 0; text-align: center; position: relative; overflow: hidden;">
+        <div class="floating-decoration" style="position: absolute; top: 20%; left: 10%; font-size: 4rem; opacity: 0.1; animation: bounce 3s ease-in-out infinite;">🎉</div>
+        <div class="floating-decoration" style="position: absolute; bottom: 20%; right: 10%; font-size: 3.5rem; opacity: 0.1; animation: float 4s ease-in-out infinite;">✨</div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <h2 style="font-size: 3rem; font-weight: 900; color: white; margin-bottom: 1rem; text-shadow: 0 4px 20px rgba(0,0,0,0.3);">Ready to Get Your Anime Case? 🚀</h2>
+            <p style="font-size: 1.3rem; color: rgba(255,255,255,0.95); margin-bottom: 2.5rem; max-width: 700px; margin-left: auto; margin-right: auto;">Join thousands of happy customers and transform your phone into a work of art!</p>
+            <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" style="display: inline-block; background: white; color: #667eea; padding: 1.5rem 4rem; border-radius: 50px; font-weight: 800; font-size: 1.3rem; text-decoration: none; box-shadow: 0 20px 60px rgba(0,0,0,0.3); transition: all 0.3s; animation: pulse 2s ease-in-out infinite;">✨ Create My Case Now</a>
+            
+            <div style="display: flex; justify-content: center; gap: 3rem; margin-top: 3rem; flex-wrap: wrap;">
+                <div style="color: white;">
+                    <div style="font-size: 2.5rem; font-weight: 900; margin-bottom: 0.3rem;">10K+</div>
+                    <div style="opacity: 0.9;">Happy Customers</div>
+                </div>
+                <div style="color: white;">
+                    <div style="font-size: 2.5rem; font-weight: 900; margin-bottom: 0.3rem;">4.9⭐</div>
+                    <div style="opacity: 0.9;">Average Rating</div>
+                </div>
+                <div style="color: white;">
+                    <div style="font-size: 2.5rem; font-weight: 900; margin-bottom: 0.3rem;">100%</div>
+                    <div style="opacity: 0.9;">Satisfaction Guarantee</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products / Upsell -->
+    <section class="related-products" style="background: linear-gradient(135deg, #f8f9ff 0%, #fff5f7 100%); padding: 5rem 0; position: relative; overflow: hidden;">
+        <div class="floating-decoration" style="position: absolute; top: 10%; left: 5%; font-size: 3rem; opacity: 0.1; animation: float 4s ease-in-out infinite;">🎁</div>
+        <div class="floating-decoration" style="position: absolute; bottom: 10%; right: 5%; font-size: 3rem; opacity: 0.1; animation: bounce 3s ease-in-out infinite;">💝</div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <h2 class="section-title" style="text-align: center; font-size: 2.5rem; font-weight: 900; background: linear-gradient(135deg, #667eea, #f093fb); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 3rem;">You May Also Like ✨</h2>
+            
+            <!-- SHOPIFY: Use recommendations API or related products app -->
+            <div class="products-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <div class="product-card" style="background: white; border-radius: 20px; padding: 2rem; text-align: center; box-shadow: 0 15px 40px rgba(0,0,0,0.1); transition: all 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 50px rgba(102, 126, 234, 0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.1)';">
+                    <div class="product-card-image" style="background: linear-gradient(135deg, #667eea, #764ba2); width: 100%; aspect-ratio: 1; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);">
+                        <span style="font-size: 4rem;">🎨</span>
+                    </div>
+                    <h3 style="font-size: 1.2rem; font-weight: 700; color: #2d3436; margin-bottom: 0.5rem;">Anime Art Print</h3>
+                    <p class="price" style="font-size: 1.5rem; font-weight: 900; background: linear-gradient(135deg, #667eea, #f093fb); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">$24.99</p>
+                </div>
+                
+                <div class="product-card" style="background: white; border-radius: 20px; padding: 2rem; text-align: center; box-shadow: 0 15px 40px rgba(0,0,0,0.1); transition: all 0.3s; cursor: pointer; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 50px rgba(240, 147, 251, 0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.1)';">
+                    <div style="position: absolute; top: 10px; right: 10px; background: linear-gradient(135deg, #feca57, #ff6b6b); color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">POPULAR</div>
+                    <div class="product-card-image" style="background: linear-gradient(135deg, #f093fb, #f5576c); width: 100%; aspect-ratio: 1; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 10px 30px rgba(240, 147, 251, 0.3);">
+                        <span style="font-size: 4rem;">✨</span>
+                    </div>
+                    <h3 style="font-size: 1.2rem; font-weight: 700; color: #2d3436; margin-bottom: 0.5rem;">Premium Case + Art Print Bundle</h3>
+                    <p class="price" style="font-size: 1.5rem; font-weight: 900; background: linear-gradient(135deg, #f093fb, #f5576c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">$64.99</p>
+                </div>
+                
+                <div class="product-card" style="background: white; border-radius: 20px; padding: 2rem; text-align: center; box-shadow: 0 15px 40px rgba(0,0,0,0.1); transition: all 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 50px rgba(67, 233, 123, 0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.1)';">
+                    <div class="product-card-image" style="background: linear-gradient(135deg, #43e97b, #38f9d7); width: 100%; aspect-ratio: 1; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 10px 30px rgba(67, 233, 123, 0.3);">
+                        <span style="font-size: 4rem;">💝</span>
+                    </div>
+                    <h3 style="font-size: 1.2rem; font-weight: 700; color: #2d3436; margin-bottom: 0.5rem;">Gift Card</h3>
+                    <p class="price" style="font-size: 1.5rem; font-weight: 900; background: linear-gradient(135deg, #43e97b, #38f9d7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">From $25</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>ANIME CASE</h4>
+                    <p>Transform your photos into stunning anime art on premium phone cases.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Product</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="faq.html">Shipping Info</a></li>
+                        <li><a href="faq.html">Returns & Refunds</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <!-- Social Media Links - Replace with your actual profiles -->
+                        <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-icon instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://tiktok.com/@yourprofile" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="social-icon tiktok">
+                            <span>🎵</span>
+                        </a>
+                        <a href="https://discord.gg/yourinvite" target="_blank" rel="noopener noreferrer" aria-label="Discord" class="social-icon discord">
+                            <span>💬</span>
+                        </a>
+                        <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="social-icon twitter">
+                            <span>🐦</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Anime Case. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
